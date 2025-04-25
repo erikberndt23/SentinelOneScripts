@@ -1,0 +1,1 @@
+event.type == "Process Execution" AND process.name in ("mimikatz.exe", "lsadump.exe", "pwdump.exe")

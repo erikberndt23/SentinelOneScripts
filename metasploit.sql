@@ -1,0 +1,1 @@
+( event.type == "Behavioral Indicators" AND indicator.name in:matchcase( "Metasploit", "CobaltStrikeStager", "Meterpreter", "PoshC2Communication", "PowershellCobaltStrike", "PowerSploit", "PenetrationFramework", "KoadicFramework", "Empyre" ) )
