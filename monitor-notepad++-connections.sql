@@ -1,0 +1,1 @@
+event.type = 'CONNECT' AND src.process.name = "notepad++.exe" AND net.direction = 'outbound'
