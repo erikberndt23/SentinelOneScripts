@@ -1,4 +1,2 @@
-/* AnyDesk */
 /* Blocks AnyDesk processes from running */
-
-tgt.process.displayName contains 'anydesk' OR src.process.displayName contains 'anydesk' OR src.process.cmdline contains "AnyDesk.exe"
+event.type = "Process Creation" AND (   src.process.name = "AnyDesk.exe"   OR src.process.displayName CONTAINS "AnyDesk"   OR src.process.cmdline CONTAINS "AnyDesk" )

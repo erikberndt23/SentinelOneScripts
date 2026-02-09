@@ -1,0 +1,5 @@
+event.type = "Process Creation"
+AND tgt.process.name = "wevtutil.exe" 
+AND src.process.cmdline contains "cl" 
+AND src.process.cmdline contains "-command" 
+AND src.process.user != "SYSTEM"
