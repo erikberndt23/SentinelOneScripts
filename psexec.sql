@@ -1,2 +1,3 @@
-/* Blocks PSExec processes and services from running */
-event.type = "Process Creation" AND ( src.process.cmdline CONTAINS "psexec" OR src.process.cmdline CONTAINS "psexesvc" ) OR event.type = "Service Creation" AND tgt.service.name CONTAINS "PSEXESVC"
+/* PSExec */
+/* Blocks PSExec processes from running */
+tgt.process.displayName contains 'psexec' OR 'psexesvc' OR src.process.displayName contains 'psexec' OR 'psexesvc' OR indicator.name = 'ServiceCreate' AND indicator.metadata contains 'PSEXESVC'

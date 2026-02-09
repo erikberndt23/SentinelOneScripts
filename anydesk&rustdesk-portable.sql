@@ -1,0 +1,2 @@
+/* Detect Portable AnyDesk/RustDesk Execution */
+event.type = "Process Creation" AND ( src.process.name contains:anycase "anydesk" OR src.process.name contains:anycase "rustdesk" ) AND ( src.process.path contains:anycase "\\Users\\" OR src.process.path contains:anycase "\\Temp\\" OR src.process.path contains:anycase "\\AppData\\" ) AND NOT ( src.process.path contains:anycase "\\Program Files\\" OR src.process.path contains:anycase "\\Program Files (x86)\\" )
